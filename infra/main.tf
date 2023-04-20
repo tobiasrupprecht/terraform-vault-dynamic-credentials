@@ -9,16 +9,16 @@ terraform {
 
 provider "vault" {}
 
+# This is an example of static K/V Secret retrieval
 data "vault_kv_secret_v2" "creds" {
   mount = "example"
   name = "awsSecrets"
-  description = "This is an example of static K/V Secret retrieval"
 }
 
+# This is an example of dynamic AWS credential retrieval
 data "vault_aws_access_credentials" "awsdynamiccreds" {
   backend = "aws"
   role = "aws-role" 
-  description = "This is an example of dynamic AWS credential retrieval"
 }
 
 provider "aws" {
