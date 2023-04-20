@@ -32,3 +32,4 @@ Then configure the Variables as shown below, filling in your VaultAddress/Namesp
 
 Once the VCS Repo is connected, and the Variables configured, a run can be started. During the run, terraform will connect to Vault and fetch the credentials neede to configure the provider via the datasources. 
 
+![image](https://user-images.githubusercontent.com/8341286/233320655-888f400b-7e61-4ef1-9e7e-c5675f66a77b.png)
