@@ -58,7 +58,7 @@ resource "vault_aws_secret_backend" "aws" {
 
 # Create Role
 resource "vault_aws_secret_backend_role" "vault_role_iam_user_credential_type" {
-  backend                  = vault_aws_secret_backend.vault_aws.path
+  backend                  = vault_aws_secret_backend.aws.path
   credential_type          = "iam_user"
   name                     = "vault-demo-iam-user"
   permissions_boundary_arn = data.aws_iam_policy.demo_user_permissions_boundary.arn
