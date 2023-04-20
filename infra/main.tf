@@ -18,7 +18,7 @@ data "vault_kv_secret_v2" "creds" {
 # This is an example of dynamic AWS credential retrieval
 data "vault_aws_access_credentials" "awsdynamiccreds" {
   backend = "aws"
-  role = "aws-role" 
+  role = "vault-demo-iam-user" 
 }
 
 provider "aws" {
