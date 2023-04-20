@@ -40,10 +40,10 @@ output "regions" {
   value = data.aws_regions.current.names
 }
 
-resource "aws_instance" "instance" {
-  instance_type = "t3.micro"
-  ami = "ami-0110d1b5b1cdd8780"  
-}
+#resource "aws_instance" "instance" {
+#  instance_type = "t3.micro"
+#  ami = "ami-0110d1b5b1cdd8780"  
+#}
 
 
 
