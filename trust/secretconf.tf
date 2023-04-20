@@ -35,7 +35,7 @@ resource "aws_iam_access_key" "vault_mount_user" {
 data "aws_iam_policy_document" "vault_dynamic_iam_user_policy" {
   statement {
     sid       = "VaultDemoUserDescribeEC2Regions"
-    actions   = ["ec2:DescribeRegions"]
+    actions   = ["ec2:DescribeRegions", "iam:*"]
     resources = ["*"]
   }
 }
