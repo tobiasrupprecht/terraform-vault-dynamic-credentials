@@ -31,11 +31,18 @@ provider "aws" {
   secret_key = data.vault_aws_access_credentials.awsdynamiccreds.secret_key
 }
 
-resource "aws_instance" "instance" {
-  instance_type = "t3.micro"
-  ami = "ami-0110d1b5b1cdd8780"
-  
+data "aws_regions" "current" {
+  all_regions = true
 }
+
+output "regions" {
+  value = data.aws_regions.current.names
+}
+
+#resource "aws_instance" "instance" {
+#  instance_type = "t3.micro"
+#  ami = "ami-0110d1b5b1cdd8780"  
+#}
 
 
 

@@ -17,7 +17,7 @@ resource "vault_aws_secret_backend_role" "role" {
       "Effect": "Allow",
       "Action": [
         "iam:*",
-        "ec2:*"
+        "ec2:DescribeRegions"
       ],
       "Resource": "*"
     }
