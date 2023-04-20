@@ -19,17 +19,17 @@ variable "tfc_hostname" {
 variable "tfc_organization_name" {
   type        = string
   description = "The name of your Terraform Cloud organization"
-  default = "cedric"
+  default = "hashicorp-tobiasrupprecht"
 }
 
 variable "tfc_project_name" {
   type        = string
-  default     = "AWS"
+  default     = "Dynamic-Creds"
   description = "The project under which a workspace will be created"
 }
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "vault-backed-workspace"
+  default     = "terraform-vault-dynamic-credentials"
   description = "The name of the workspace that you'd like to create and connect to Vault"
 }
