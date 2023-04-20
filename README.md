@@ -1,5 +1,5 @@
 # Terraform Dynamic Credential Injection using Vault
-This is a tutorial focusing on the Vault Integration of the (Dynamic Credentials)[https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration] feature in Terraform Cloud. At the time of writing, Terraform Enterprise only supports the K/V configuration in this example. 
+This is a tutorial focusing on the Vault Integration of the (Dynamic Credentials). It is based on the following tutorial: [https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration]
 
 ## Vault Setup
 
@@ -14,12 +14,12 @@ You will need root aws credentials with the ability to creat IAM Accounts to con
 
 Once all Variables are configured, configure the Vault address and token as environmental variables and apply the configuration within 
 
+
 '''
-cd trust/
+
 export VAULT_ADDR=https://VAULT_ADDRESS_GOES_HERE:8200
 export VAULT_TOKEN=VAULT_TOKEN_GOES_HERE
-terraform init
-terraform apply
+
 '''
 
 ## TFC Setup
